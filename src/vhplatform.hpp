@@ -1,12 +1,14 @@
 #pragma once
 
 #include <cstdint>
+#include <cstring>
+#include <climits>
+
 #include <string>
 #include <string_view>
 #include <array>
 #include <vector>
 #include <iostream>
-
 
 using u8  = uint8_t;
 using u16 = uint16_t;
@@ -25,9 +27,5 @@ verr verrmsg(int x, std::string_view strerr);
 
 void asrts(bool cond, int module, std::string_view msg);
 
-class VHBits {
-public:
-    static std::pair<u8, u8> splitIndex(int v) {
-        return { static_cast<u8>(v >> 3), static_cast<u8>(v & 7) };
-    }
-};
+
+#include "vhbits.hpp"

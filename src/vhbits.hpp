@@ -67,4 +67,24 @@ public:
         return (arr[byteIdx] & mask(bitIdx)) != 0;
     }
 
+
+    /**
+     * @brief Speed-optimized routines
+     */
+
+    static void BitClr(uint8_t *ptr, int n) {
+        auto [byteIdx, bitIdx] = splidx(n);
+        ptr[byteIdx] &= ~ mask(bitIdx);
+    }
+
+    static void BitSet(uint8_t *ptr, int n) {
+        auto [byteIdx, bitIdx] = splidx(n);
+        ptr[byteIdx] |= mask(bitIdx);
+    }
+
+    static bool BitVal(uint8_t *ptr, int n) {
+        auto [byteIdx, bitIdx] = splidx(n);
+        return (ptr[byteIdx] & mask(bitIdx)) != 0;
+    }
+
 };

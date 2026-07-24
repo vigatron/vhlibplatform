@@ -2,15 +2,15 @@
 
 A minimal, high-performance C++ platform utilities library designed for modern low-level systems and embedded application layers.
 
-[![Version](https://img.shields.io/badge/version-0.3-orange.svg)](https://github.com/vigatron/vhlibplatform)
+[![Version](https://img.shields.io/badge/version-0.4.0-orange.svg)](https://github.com/vigatron/vhlibplatform)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![C++ Standard](https://img.shields.io/badge/C%2B%2B-23-blue.svg)](https://en.cppreference.com/w/cpp/23)
 
 ## Features
 
-- **Modern C++23 Base**: Utilizes recent language advancements like `std::string_view` and `constexpr` for zero-overhead configurations.
+
 - **Fast Bit Manipulation (`VHBits`)**: High-performance routines for safe index splitting, byte-to-bit array streaming, and raw pointer or vector-based bit clearing, setting, and validation.
-- **Unified Fixed-Width Types**: Concise primitive aliases (`u8`, `u16`, `u32`) and platform error definition handling (`verr`, `vok`).
+- **Unified Fixed-Width Types**: Platform error definition handling (`verr`, `vok`).
 - **Memory & Safety Diagnostics**: Lightweight diagnostic routines (`asrts`) to quickly capture critical subsystem or module runtime faults.
 
 ## Project Structure

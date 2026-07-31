@@ -1,14 +1,14 @@
 /* ======================================================================================
  * Library       : vhlibplatform
  * Description   : C++ platform library
- * Revision      : 0.4.0
+ * Revision      : 0.4.1
  * Source        : https://github.com/vigatron/vhlibplatform
  * Disclaimer    : Provided "AS IS", without warranty.
  * License       : MIT
  * File          : src/vhbits.hpp
- * Content size  : 2052
- * Date / Time   : 24-07-2026 15:29:34
- * MD5           : bb8d49a88b110c87d1ad2c7bb37a8406
+ * Content size  : 2058
+ * Date / Time   : 31-07-2026 21:49:34
+ * MD5           : 8f2a2220ac5c548bde194880fdd198d9
  * Notes         : MD5 = file content without header/footer
  * Encoding      : UTF-8
  * Author        : Viktor Glebov / V01G04A81
@@ -98,7 +98,7 @@ public:
         ptr[byteIdx] |= mask(bitIdx);
     }
 
-    static bool BitVal(uint8_t *ptr, int n) {
+    static bool BitVal(const uint8_t *ptr, int n) {
         auto [byteIdx, bitIdx] = splidx(n);
         return (ptr[byteIdx] & mask(bitIdx)) != 0;
     }
@@ -107,9 +107,9 @@ public:
 /* ========================[  END FILE CONTENT  ]========================
  * Library          : vhlibplatform
  * File             : src/vhbits.hpp
- * Revision         : 0.4.0
- * Content size     : 2052
- * Date / Time      : 24-07-2026 15:29:34
- * MD5              : bb8d49a88b110c87d1ad2c7bb37a8406
+ * Revision         : 0.4.1
+ * Content size     : 2058
+ * Date / Time      : 31-07-2026 21:49:34
+ * MD5              : 8f2a2220ac5c548bde194880fdd198d9
  * Copyright        : © 2006–2026 Viktor Glebov
  * ====================================================================== */

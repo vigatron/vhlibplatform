@@ -1,13 +1,13 @@
 /* ======================================================================================
  * Library       : vhlibplatform
  * Description   : C++ platform library
- * Revision      : 0.4.0
+ * Revision      : 0.4.1
  * Source        : https://github.com/vigatron/vhlibplatform
  * Disclaimer    : Provided "AS IS", without warranty.
  * License       : MIT
  * File          : src/vhassert.cpp
  * Content size  : 206
- * Date / Time   : 24-07-2026 15:29:34
+ * Date / Time   : 31-07-2026 21:49:34
  * MD5           : de168e6e189844c515880aa81f35b0a1
  * Notes         : MD5 = file content without header/footer
  * Encoding      : UTF-8
@@ -24,9 +24,9 @@ void asrts(bool cond, int module, std::string_view msg) {
 /* ========================[  END FILE CONTENT  ]========================
  * Library          : vhlibplatform
  * File             : src/vhassert.cpp
- * Revision         : 0.4.0
+ * Revision         : 0.4.1
  * Content size     : 206
- * Date / Time      : 24-07-2026 15:29:34
+ * Date / Time      : 31-07-2026 21:49:34
  * MD5              : de168e6e189844c515880aa81f35b0a1
  * Copyright        : © 2006–2026 Viktor Glebov
  * ====================================================================== */

@@ -2,7 +2,7 @@
 
 A minimal, high-performance C++ platform utilities library designed for modern low-level systems and embedded application layers.
 
-[![Version](https://img.shields.io/badge/version-0.4.0-orange.svg)](https://github.com/vigatron/vhlibplatform)
+[![Version](https://img.shields.io/badge/version-0.4.1-orange.svg)](https://github.com/vigatron/vhlibplatform)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![C++ Standard](https://img.shields.io/badge/C%2B%2B-17-blue.svg)](https://en.cppreference.com/w/cpp/23)
 

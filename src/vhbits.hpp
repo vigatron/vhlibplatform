@@ -1,13 +1,13 @@
 /* ======================================================================================
  * Library       : vhlibplatform
  * Description   : C++ platform library
- * Revision      : 0.4.1
+ * Revision      : 0.4.2
  * Source        : https://github.com/vigatron/vhlibplatform
  * Disclaimer    : Provided "AS IS", without warranty.
  * License       : MIT
  * File          : src/vhbits.hpp
  * Content size  : 2058
- * Date / Time   : 31-07-2026 21:49:34
+ * Date / Time   : 01-08-2026 15:54:26
  * MD5           : 8f2a2220ac5c548bde194880fdd198d9
  * Notes         : MD5 = file content without header/footer
  * Encoding      : UTF-8
@@ -107,9 +107,9 @@ public:
 /* ========================[  END FILE CONTENT  ]========================
  * Library          : vhlibplatform
  * File             : src/vhbits.hpp
- * Revision         : 0.4.1
+ * Revision         : 0.4.2
  * Content size     : 2058
- * Date / Time      : 31-07-2026 21:49:34
+ * Date / Time      : 01-08-2026 15:54:26
  * MD5              : 8f2a2220ac5c548bde194880fdd198d9
  * Copyright        : © 2006–2026 Viktor Glebov
  * ====================================================================== */

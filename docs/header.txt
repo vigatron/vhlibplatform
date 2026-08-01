@@ -1,7 +1,7 @@
 /* ======================================================================================
  * Library       : vhlibplatform
  * Description   : C++ platform library
- * Revision      : 0.4.1
+ * Revision      : 0.4.2
  * Source        : https://github.com/vigatron/vhlibplatform
  * Disclaimer    : Provided "AS IS", without warranty.
  * License       : MIT

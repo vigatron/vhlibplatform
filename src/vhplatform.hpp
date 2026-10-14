@@ -41,7 +41,6 @@ verr verrmsg(int x, std::string_view strerr);
 
 void asrts(bool cond, int module, std::string_view msg);
 
-
 #include "vhbits.hpp"
 /* ========================[  END FILE CONTENT  ]========================
  * Library          : vhlibplatform

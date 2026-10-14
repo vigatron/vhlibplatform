@@ -1,5 +1,7 @@
 # vhlibplatform
 
+Revision 0.5.0
+
 A minimal, high-performance C++ platform utilities library designed for modern low-level systems and embedded application layers.
 
 [![Version](https://img.shields.io/badge/version-0.4.2-orange.svg)](https://github.com/vigatron/vhlibplatform)

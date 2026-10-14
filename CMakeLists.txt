@@ -10,7 +10,10 @@ configure_file(
 
 file(GLOB_RECURSE srcfiles src/*)
 
-add_library(vhlib_platform STATIC ${srcfiles})
+add_library(vhlib_platform STATIC ${srcfiles}
+    src/vhassert.cpp
+    src/verrmsg.cpp
+)
 
 target_include_directories(vhlib_platform PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src

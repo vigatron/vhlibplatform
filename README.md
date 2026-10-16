@@ -1,29 +1,29 @@
 # vhlibplatform
 
-Revision 0.5.0
+**Revision:** 0.5.0
+**Author:** V01G04A81 / Viktor Glebov
 
 A minimal, high-performance C++ platform utilities library designed for modern low-level systems and embedded application layers.
 
-[![Version](https://img.shields.io/badge/version-0.4.2-orange.svg)](https://github.com/vigatron/vhlibplatform)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![C++ Standard](https://img.shields.io/badge/C%2B%2B-17-blue.svg)](https://en.cppreference.com/w/cpp/23)
-
 ## Features
 
-
 - **Fast Bit Manipulation (`VHBits`)**: High-performance routines for safe index splitting, byte-to-bit array streaming, and raw pointer or vector-based bit clearing, setting, and validation.
-- **Unified Fixed-Width Types**: Platform error definition handling (`verr`, `vok`).
-- **Memory & Safety Diagnostics**: Lightweight diagnostic routines (`asrts`) to quickly capture critical subsystem or module runtime faults.
+- **Unified Fixed-Width Types & Constants**: Platform error definition handling (`verr`, `vok`) and predefined memory size constants (`F1K` to `F1M`).
+- **Enhanced Error Messaging**: Lightweight `verrmsg` utilities with flexible support for `const char*`, `std::string`, and `std::string_view`.
+- **Memory & Safety Diagnostics**: Zero-allocation diagnostic routines (`asrts`) utilizing `std::string_view` to quickly capture critical subsystem or module runtime faults.
 
 ## Project Structure
 
 ```text
 vhlibplatform/
-├── CMakeLists.txt        # Build system configuration
+├── CMakeLists.txt          # Build system configuration
+├── version.h.in            # Version template for CMake generation
+├── docs/                   # Documentation assets (e.g., license headers/footers)
 └── src/
-    ├── vhbits.hpp        # Bitwise transformations and optimizations
-    ├── vhplatform.hpp    # Fundamental type aliases, macros, and declarations
-    └── vhassert.cpp      # Runtime diagnostics and module assertions
+    ├── vhplatform.hpp      # Fundamental type aliases, macros, constants, and declarations
+    ├── vhbits.hpp          # Bitwise transformations and optimizations
+    ├── vhassert.cpp        # Runtime diagnostics and module assertions
+    └── verrmsg.cpp         # Error message formatting and logging utilities
 ```
 
 ## Integration via CMake
@@ -43,6 +43,7 @@ target_link_libraries(YourApp PRIVATE vhlib_platform)
 ```cpp
 #include "vhplatform.hpp"
 #include <iostream>
+#include <vector>
 
 int main() {
     // 1. Bitwise Operations Example
@@ -55,8 +56,11 @@ int main() {
     bool is_set = VHBits::BitVal(buffer, 4);
     std::cout << "Bit index 4 status: " << std::boolalpha << is_set << std::endl;
 
-    // 2. Diagnostics
-    asrts(vok == 0, 101, "Initialization error occurred!");
+    // 2. Enhanced Error Messaging
+    verr err = verrmsg(101, "Initialization error occurred!");
+
+    // 3. Diagnostics (uses std::string_view for zero-allocation overhead)
+    asrts(err == vok, 1, "Critical subsystem failure!");
 
     return 0;
 }

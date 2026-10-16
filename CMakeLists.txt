@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(vhlibplatform VERSION 0.4.2 LANGUAGES CXX)
+project(vhlibplatform VERSION 0.5.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -10,7 +10,12 @@ configure_file(
 
 file(GLOB_RECURSE srcfiles src/*)
 
-add_library(vhlib_platform STATIC ${srcfiles})
+add_library(vhlib_platform STATIC ${srcfiles}
+    src/vhplatform.hpp
+    src/vhbits.hpp
+    src/vhassert.cpp
+    src/verrmsg.cpp
+)
 
 target_include_directories(vhlib_platform PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src

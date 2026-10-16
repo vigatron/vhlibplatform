@@ -1,14 +1,14 @@
 /* ======================================================================================
  * Library       : vhlibplatform
  * Description   : C++ platform library
- * Revision      : 0.4.2
+ * Revision      : 0.5.0
  * Source        : https://github.com/vigatron/vhlibplatform
  * Disclaimer    : Provided "AS IS", without warranty.
  * License       : MIT
  * File          : src/vhbits.hpp
- * Content size  : 2058
- * Date / Time   : 01-08-2026 15:54:26
- * MD5           : 8f2a2220ac5c548bde194880fdd198d9
+ * Content size  : 3414
+ * Date / Time   : 16-10-2026 14:05:16
+ * MD5           : 9eba426ab0f6c16c6e5e7443f7eec20d
  * Notes         : MD5 = file content without header/footer
  * Encoding      : UTF-8
  * Author        : Viktor Glebov / V01G04A81
@@ -19,10 +19,8 @@
 #include <climits>
 #include <cstdint>
 #include <cstring>
-
-#include <utility>
-
 #include <vector>
+#include <utility>
 
 class VHBits {
   public:
@@ -101,7 +99,9 @@ class VHBits {
     }
 
     /**
-     * Max resolution of the byte in bits
+     * @brief Maximum resolution of a byte in bits
+     * @param sym Byte value
+     * @return uint8_t maximum resolution
      */
     static uint8_t SymMaxReso(uint8_t sym) {
         uint8_t r = 8;
@@ -116,7 +116,10 @@ class VHBits {
     }
 
     /**
-     * Max resolution of the block in bits
+     * @brief Maximum resolution of a block in bits
+     * @param ptr Pointer to data
+     * @param len Block length
+     * @return uint8_t maximum resolution across all bytes
      */
     static uint8_t MemBlockMaxReso(const uint8_t *ptr, uint16_t len) {
         uint8_t rmax = 0;
@@ -129,19 +132,33 @@ class VHBits {
     }
 
     /**
-     * 
+     * @brief Byte to bit mapping helper
+     * @param i Bit number to map
+     * @param byt Output byte index
+     * @param bit Output bit index
      */
     static void ByteBit(int i, uint8_t *byt, uint8_t *bit) {
         *byt = i >> 3;
         *bit = i & 7;
     }
+
+    /**
+     * @brief Round up to full bytes
+     * @param bits Bit count
+     * @return size_t rounded byte count
+     */
+    static size_t RoundBytes(size_t bits) {
+        return (bits>>3) + ((bits % 8) ? 1:0);
+    }
+
 };
+
 /* ========================[  END FILE CONTENT  ]========================
  * Library          : vhlibplatform
  * File             : src/vhbits.hpp
- * Revision         : 0.4.2
- * Content size     : 2058
- * Date / Time      : 01-08-2026 15:54:26
- * MD5              : 8f2a2220ac5c548bde194880fdd198d9
+ * Revision         : 0.5.0
+ * Content size     : 3414
+ * Date / Time      : 16-10-2026 14:05:16
+ * MD5              : 9eba426ab0f6c16c6e5e7443f7eec20d
  * Copyright        : © 2006–2026 Viktor Glebov
  * ====================================================================== */

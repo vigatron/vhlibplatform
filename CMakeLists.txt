@@ -11,6 +11,8 @@ configure_file(
 file(GLOB_RECURSE srcfiles src/*)
 
 add_library(vhlib_platform STATIC ${srcfiles}
+    src/vhplatform.hpp
+    src/vhbits.hpp
     src/vhassert.cpp
     src/verrmsg.cpp
 )
